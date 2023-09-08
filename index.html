@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Expense Tracking Apps</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container col-md-6 ofset-3">
+      <h1 class="my-2 text-center">Monthly Expense Tracking Apps</h1>
+      <form id="gelirFormu" class="input-group mb-3">
+        <input
+          type="number"
+          class="form-control"
+          id="income-input"
+          placeholder="Add income..."
+          min="0"
+          required
+          autofocus
+        />
+        <button class="btn btn-primary px-4" type="submit" id="income-button">
+          Add
+        </button>
+      </form>
+
+      <form class="border rounded-4 p-3" id="giderFormu">
+        <div class="row">
+          <h4 class="text-center">Expenditure items</h4>
+          <div class="col-6 mb-3">
+            <label for="yer" class="form-label">Expenditure area</label>
+            <input
+              type="text"
+              name="yer"
+              class="form-control"
+              id="harcamaYer"
+              placeholder="greengrocer, market, bills etc."
+            />
+          </div>
+          <div class="col-6 mb-3">
+            <label for="Tarih" class="form-label">Date</label>
+            <input
+              type="date"
+              name="Tarih"
+              class="form-control"
+              id="harcamaTarih"
+              placeholder="tarih"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="Miktar" class="form-label">Spending Amount</label>
+            <input
+              type="number"
+              name="Miktar"
+              class="form-control"
+              id="harcamaMiktar"
+              placeholder="100 ₺"
+            />
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary px-5" id="GiderBtn">
+            Save
+          </button>
+        </div>
+      </form>
+      <table
+        class="table table-striped table-hover table-bordered mt-3"
+        id="tableMain"
+      >
+        <thead>
+          <tr>
+            <th scope="col">Expenditure Area</th>
+            <th scope="col">Date</th>
+            <th scope="col">Amount</th>
+            <th class="text-center" scope="col">Remove</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" id="tbodyTag"></tbody>
+      </table>
+
+      <div>
+        <table class="table table-striped table-hover border ms-auto mt-3 w-50">
+          <tbody>
+            <tr>
+              <td class="w-50">Your Income:</td>
+              <td id="income-td">0</td>
+            </tr>
+            <tr>
+              <td>Your Expense :</td>
+              <td id="total-Exp">0</td>
+            </tr>
+            <tr>
+              <td>Remainder :</td>
+              <td id="income-Rest">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center">
+        <button type="button" class="btn btn-primary px-5" id="cleanForm">
+          Clear Information
+        </button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
