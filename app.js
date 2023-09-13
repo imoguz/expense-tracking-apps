@@ -64,13 +64,13 @@ cleanForm.addEventListener("click", () => {
 // ***** Functions *****
 // Gelir ve giderlerin toplamını tabloya yazma
 function toplamGelirGiderYaz() {
-  gelirTablosu.innerText = toplamGelir;
+  gelirTablosu.innerText = `$${toplamGelir}`;
   toplamHarcama = harcamalar.reduce(
     (acc, item) => (acc += Number(item.harcamaMiktari)),
     0
   );
-  harcamaTablosu.innerText = toplamHarcama;
-  kalanGelirTablosu.innerText = toplamGelir - toplamHarcama;
+  harcamaTablosu.innerText = `$${toplamHarcama}`;
+  kalanGelirTablosu.innerText = `$${toplamGelir - toplamHarcama}`;
 }
 // Yeni gideri ekleyip toplam giderleri güncelleme
 function giderEkle() {
