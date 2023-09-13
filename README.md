@@ -4,7 +4,7 @@ Expense Tracking Apps
 
 ## Description
 
-In this application, the monthly income and expenses entered by the user are listed in a table, the income and expense totals are calculated, and finally the remaining income amount is displayed.
+In this application, the monthly income and expenses entered by the user are listed in a table, the income and expense totals are calculated, and finally the remaining income amount is displayed. In addition, all income and expense data saved in local storage...
 
 ## Project GIF
 
